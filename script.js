@@ -118,7 +118,39 @@ return reduce(sum)
 
 }
 
+function pinnacleNumbers(date){
 
+let parts = date.split("-")
+
+let month = reduce(Number(parts[1]))
+let day = reduce(Number(parts[2]))
+let year = reduce(parts[0].split("").reduce((a,b)=>a+Number(b),0))
+
+let p1 = reduce(month + day)
+let p2 = reduce(day + year)
+let p3 = reduce(p1 + p2)
+let p4 = reduce(month + year)
+
+return [p1,p2,p3,p4]
+
+}
+
+function challengeNumbers(date){
+
+let parts = date.split("-")
+
+let month = reduce(Number(parts[1]))
+let day = reduce(Number(parts[2]))
+let year = reduce(parts[0].split("").reduce((a,b)=>a+Number(b),0))
+
+let c1 = Math.abs(month-day)
+let c2 = Math.abs(day-year)
+let c3 = Math.abs(c1-c2)
+let c4 = Math.abs(month-year)
+
+return [c1,c2,c3,c4]
+
+}
 // MAIN FUNCTION
 function calculate(){
 
@@ -146,11 +178,14 @@ let a = attitude(birth)
 
 let m = maturity(life,exp)
 
+  let py = personalYear(birth)
+  
 document.getElementById("life").innerText = life
 document.getElementById("soul").innerText = s
 document.getElementById("expression").innerText = exp
 document.getElementById("birthday").innerText = b
 document.getElementById("attitude").innerText = a
 document.getElementById("maturity").innerText = m
-
+document.getElementById("personalYear").innerText = py
+document.getElementById("personalYear").innerText = py
 }
