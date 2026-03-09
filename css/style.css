@@ -1,31 +1,143 @@
 body{
 
-font-family:Arial;
+font-family: "Segoe UI",sans-serif;
+background:#F5F7F6;
+color:#3D5A5A;
+margin:0;
 
-max-width:700px;
+}
 
+.container{
+
+max-width:900px;
 margin:auto;
+padding:40px;
 
-padding:20px;
+}
+
+header{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+.subtitle{
+
+color:#6b8f8a;
+
+}
+
+.form-box{
+
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+display:flex;
+flex-direction:column;
+gap:10px;
 
 }
 
 input{
 
-padding:10px;
-
-margin:5px;
+padding:14px;
+border-radius:10px;
+border:1px solid #ddd;
 
 }
 
 button{
 
-padding:10px 15px;
-
-background:#4f46e5;
-
-color:white;
-
+padding:12px;
 border:none;
+border-radius:10px;
+background:#6B8F8A;
+color:white;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#5c7a75;
+
+}
+
+.result{
+
+margin-top:50px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+
+}
+
+.card{
+
+background:#E6EFEA;
+padding:20px;
+border-radius:14px;
+text-align:center;
+
+transition:0.2s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.icon{
+
+font-size:22px;
+
+}
+
+.number{
+
+font-size:40px;
+font-weight:600;
+margin:10px;
+
+}
+
+.more{
+
+background:#9FB7B2;
+
+margin-top:10px;
+
+}
+
+.explore{
+
+text-align:center;
+margin-top:40px;
+
+}
+
+.explore-buttons{
+
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+
+}
+
+.explore-buttons button{
+
+background:#E6EFEA;
+color:#3D5A5A;
 
 }
