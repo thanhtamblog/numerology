@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tra cứu Nhân Số Học</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
@@ -19,162 +17,65 @@
 
 <div class="container">
 
-<header>
-
 <h1>📜 Tra cứu Nhân Số Học</h1>
 
-<p>
-Khám phá ý nghĩa các con số chủ đạo trong ngày sinh và tên của bạn.
-</p>
+<p>Khám phá ý nghĩa các con số chủ đạo trong ngày sinh và tên của bạn.</p>
 
-</header>
-
-
-<!-- FORM -->
-
-<section class="form-box">
-
-<div class="input-group">
-
-<span class="icon">👤</span>
+<div class="form-box">
 
 <input id="name" placeholder="Nhập họ tên của bạn">
 
-</div>
-
-
-<div class="input-group">
-
-<span class="icon">📅</span>
-
 <input id="birth" type="date">
 
+<button onclick="calculate()">Xem kết quả</button>
+
 </div>
-
-
-<button class="main-btn" onclick="runTool()">
-
-Xem kết quả
-
-</button>
-
-</section>
-
-
-<!-- RESULT -->
-
-<section class="result">
 
 <h2>Kết quả của bạn</h2>
 
 <div class="grid">
 
-
 <div class="card">
-
-<div class="card-icon">#</div>
-
 <h3>Số chủ đạo</h3>
-
-<div id="life" class="number">-</div>
-
-<button class="more">Xem thêm ›</button>
-
+<div id="life">-</div>
+<a href="pages/life-path.html">Xem thêm</a>
 </div>
 
-
 <div class="card">
-
-<div class="card-icon">♡</div>
-
 <h3>Linh hồn</h3>
-
-<div id="soul" class="number">-</div>
-
-<button class="more">Xem thêm ›</button>
-
+<div id="soul">-</div>
+<a href="pages/soul.html">Xem thêm</a>
 </div>
 
-
 <div class="card">
-
-<div class="card-icon">🧠</div>
-
 <h3>Biểu đạt</h3>
-
-<div id="exp" class="number">-</div>
-
-<button class="more">Xem thêm ›</button>
-
+<div id="expression">-</div>
+<a href="pages/expression.html">Xem thêm</a>
 </div>
 
-
 <div class="card">
-
-<div class="card-icon">📅</div>
-
 <h3>Ngày sinh</h3>
-
-<div id="birthnum" class="number">-</div>
-
-<button class="more">Xem thêm ›</button>
-
+<div id="birthday">-</div>
+<a href="pages/birthday.html">Xem thêm</a>
 </div>
 
-
 <div class="card">
-
-<div class="card-icon">⚡</div>
-
 <h3>Thái độ</h3>
-
-<div id="att" class="number">-</div>
-
-<button class="more">Xem thêm ›</button>
-
+<div id="attitude">-</div>
+<a href="pages/attitude.html">Xem thêm</a>
 </div>
-
 
 <div class="card">
-
-<div class="card-icon">⭐</div>
-
 <h3>Trưởng thành</h3>
-
-<div id="mat" class="number">-</div>
-
-<button class="more">Xem thêm ›</button>
-
+<div id="maturity">-</div>
+<a href="pages/maturity.html">Xem thêm</a>
 </div>
 
 </div>
 
-</section>
-
-
-
-<!-- EXPLORE -->
-
-<section class="explore">
-
-<h2>Khám phá thêm</h2>
-
-<div class="explore-buttons">
-
-<button>⏳ Chu kỳ cuộc đời</button>
-
-<button>📊 Biểu đồ Pitago</button>
-
-<button>📖 Ý nghĩa</button>
-
 </div>
 
-</section>
-
-</div>
-
-
-<script src="app.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
