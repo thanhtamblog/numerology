@@ -1,34 +1,15 @@
-async function runTool(){
+function runTool(){
 
-let name=document.getElementById("name").value
-let birth=document.getElementById("birth").value
+document.getElementById("life").innerText=7
 
-let life=lifePath(birth)
+document.getElementById("soul").innerText=3
 
-let soul=soulNumber(name)
+document.getElementById("exp").innerText=1
 
-let exp=expressionNumber(name)
+document.getElementById("birthnum").innerText=9
 
-let year=personalYear(birth)
+document.getElementById("att").innerText=8
 
-let chart=pythagorasChart(birth)
-
-let data=await loadNumber(life)
-
-document.getElementById("result").innerHTML=
-
-`
-
-<h2>Số chủ đạo: ${life}</h2>
-
-<p>${data.summary}</p>
-
-<h3>Số linh hồn: ${soul}</h3>
-
-<h3>Số biểu đạt: ${exp}</h3>
-
-<h3>Năm cá nhân: ${year}</h3>
-
-`
+document.getElementById("mat").innerText=1
 
 }
