@@ -163,6 +163,7 @@ function calcPersonalYear(day, month){
 
     return sum;
 }
+
 // MAIN FUNCTION
 function calculate(){
 
@@ -201,7 +202,5 @@ document.getElementById("birthday").innerText = b
 document.getElementById("attitude").innerText = a
 document.getElementById("maturity").innerText = m
 document.getElementById("personalYear").innerText = py
-document.getElementById("personalYear").innerText = py
-document.getElementById("personalYear").innerText =
-    calcPersonalYear(day, month);
+
 }
