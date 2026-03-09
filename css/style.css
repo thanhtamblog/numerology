@@ -1,8 +1,8 @@
 body{
 
-font-family: "Segoe UI",sans-serif;
-background:#F5F7F6;
-color:#3D5A5A;
+font-family:'Inter',sans-serif;
+background:#F3F1EC;
+color:#4E5F57;
 margin:0;
 
 }
@@ -11,64 +11,89 @@ margin:0;
 
 max-width:900px;
 margin:auto;
-padding:40px;
+padding:50px 20px;
+text-align:center;
 
 }
 
-header{
+header h1{
 
-text-align:center;
+font-size:34px;
+margin-bottom:10px;
+
+}
+
+header p{
+
+color:#6c7b73;
 margin-bottom:40px;
 
 }
 
-.subtitle{
 
-color:#6b8f8a;
-
-}
+/* FORM */
 
 .form-box{
 
-background:white;
-padding:30px;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+background:#EFEDE7;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+max-width:500px;
+margin:auto;
+
+}
+
+.input-group{
 
 display:flex;
-flex-direction:column;
-gap:10px;
-
-}
-
-input{
-
+align-items:center;
+background:white;
 padding:14px;
-border-radius:10px;
-border:1px solid #ddd;
+border-radius:12px;
+margin-bottom:15px;
 
 }
 
-button{
+.input-group input{
 
-padding:12px;
 border:none;
-border-radius:10px;
-background:#6B8F8A;
+flex:1;
+font-size:15px;
+outline:none;
+
+}
+
+.icon{
+
+margin-right:10px;
+
+}
+
+.main-btn{
+
+background:#7C9486;
 color:white;
+padding:14px 30px;
+border:none;
+border-radius:12px;
 cursor:pointer;
+font-size:15px;
 
 }
 
-button:hover{
+.main-btn:hover{
 
-background:#5c7a75;
+background:#6c8477;
 
 }
+
+
+/* RESULT */
 
 .result{
 
-margin-top:50px;
+margin-top:60px;
 
 }
 
@@ -77,27 +102,26 @@ margin-top:50px;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:20px;
+margin-top:30px;
 
 }
 
 .card{
 
-background:#E6EFEA;
-padding:20px;
-border-radius:14px;
-text-align:center;
-
-transition:0.2s;
+background:#E6EAE4;
+padding:25px;
+border-radius:20px;
+transition:0.25s;
 
 }
 
 .card:hover{
 
-transform:translateY(-5px);
+transform:translateY(-6px);
 
 }
 
-.icon{
+.card-icon{
 
 font-size:22px;
 
@@ -105,24 +129,19 @@ font-size:22px;
 
 .number{
 
-font-size:40px;
+font-size:38px;
 font-weight:600;
-margin:10px;
-
-}
-
-.more{
-
-background:#9FB7B2;
-
 margin-top:10px;
+color:#5F776A;
 
 }
+
+
+/* EXPLORE */
 
 .explore{
 
-text-align:center;
-margin-top:40px;
+margin-top:70px;
 
 }
 
@@ -131,13 +150,29 @@ margin-top:40px;
 display:flex;
 justify-content:center;
 gap:15px;
-margin-top:15px;
+margin-top:20px;
 
 }
 
 .explore-buttons button{
 
-background:#E6EFEA;
-color:#3D5A5A;
+background:#E6EAE4;
+border:none;
+padding:12px 20px;
+border-radius:14px;
+cursor:pointer;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
 
 }
