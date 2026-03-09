@@ -177,3 +177,17 @@ document.getElementById("p"+i).innerText = count[i]
 }
 
 }
+function personalYear(date){
+
+let parts = date.split("-")
+
+let month = Number(parts[1])
+let day = Number(parts[2])
+
+let year = new Date().getFullYear()
+
+let sum = month + day + year.toString().split("").reduce((a,b)=>a+Number(b),0)
+
+return reduce(sum)
+
+}
