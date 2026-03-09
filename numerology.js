@@ -1,22 +1,17 @@
-// ===============================
-// REDUCE NUMBER (giữ master 11 22 33)
-// ===============================
-
 function reduce(num){
 
 num = Number(num)
 
 while(num > 9 && num !== 11 && num !== 22 && num !== 33){
-num = num.toString().split("").reduce((a,b)=>a + Number(b),0)
+
+num = num.toString().split("").reduce((a,b)=>a+Number(b),0)
+
 }
 
 return num
+
 }
 
-
-// ===============================
-// LIFE PATH
-// ===============================
 
 function lifePath(date){
 
@@ -29,10 +24,6 @@ return reduce(sum)
 }
 
 
-// ===============================
-// BIRTHDAY NUMBER
-// ===============================
-
 function birthday(date){
 
 let day = parseInt(date.split("-")[2])
@@ -41,10 +32,6 @@ return reduce(day)
 
 }
 
-
-// ===============================
-// ATTITUDE NUMBER
-// ===============================
 
 function attitude(date){
 
@@ -57,20 +44,12 @@ return reduce(sum)
 }
 
 
-// ===============================
-// MATURITY NUMBER
-// ===============================
-
 function maturity(life,expression){
 
 return reduce(life + expression)
 
 }
 
-
-// ===============================
-// LETTER → NUMBER
-// ===============================
 
 const letterMap = {
 
@@ -80,10 +59,6 @@ S:1,T:2,U:3,V:4,W:5,X:6,Y:7,Z:8
 
 }
 
-
-// ===============================
-// NORMALIZE NAME (remove accents)
-// ===============================
 
 function normalizeName(name){
 
@@ -95,10 +70,6 @@ return name
 }
 
 
-// ===============================
-// EXPRESSION NUMBER
-// ===============================
-
 function expression(name){
 
 name = normalizeName(name).replace(/[^A-Z]/g,'')
@@ -109,10 +80,6 @@ return reduce(sum)
 
 }
 
-
-// ===============================
-// SOUL URGE
-// ===============================
 
 function soul(name){
 
@@ -135,10 +102,6 @@ return reduce(sum)
 }
 
 
-// ===============================
-// PERSONAL YEAR
-// ===============================
-
 function personalYear(date){
 
 let parts = date.split("-")
@@ -155,10 +118,6 @@ return reduce(month + day + yearSum)
 }
 
 
-// ===============================
-// PERSONAL MONTH
-// ===============================
-
 function personalMonth(date){
 
 let py = personalYear(date)
@@ -170,10 +129,6 @@ return reduce(py + month)
 }
 
 
-// ===============================
-// PERSONAL DAY
-// ===============================
-
 function personalDay(date){
 
 let pm = personalMonth(date)
@@ -184,54 +139,6 @@ return reduce(pm + day)
 
 }
 
-
-// ===============================
-// PINNACLE NUMBERS
-// ===============================
-
-function pinnacleNumbers(date){
-
-let parts = date.split("-")
-
-let month = reduce(Number(parts[1]))
-let day = reduce(Number(parts[2]))
-let year = reduce(parts[0].split("").reduce((a,b)=>a+Number(b),0))
-
-let p1 = reduce(month + day)
-let p2 = reduce(day + year)
-let p3 = reduce(p1 + p2)
-let p4 = reduce(month + year)
-
-return [p1,p2,p3,p4]
-
-}
-
-
-// ===============================
-// CHALLENGE NUMBERS
-// ===============================
-
-function challengeNumbers(date){
-
-let parts = date.split("-")
-
-let month = reduce(Number(parts[1]))
-let day = reduce(Number(parts[2]))
-let year = reduce(parts[0].split("").reduce((a,b)=>a+Number(b),0))
-
-let c1 = Math.abs(month-day)
-let c2 = Math.abs(day-year)
-let c3 = Math.abs(c1-c2)
-let c4 = Math.abs(month-year)
-
-return [c1,c2,c3,c4]
-
-}
-
-
-// ===============================
-// CREATE PITAGO CHART
-// ===============================
 
 function createPitagoChart(birthdate){
 
@@ -258,10 +165,6 @@ return count
 }
 
 
-// ===============================
-// RENDER PITAGO CHART
-// ===============================
-
 function renderPitago(chart){
 
 let layout = [1,4,7,2,5,8,3,6,9]
@@ -285,10 +188,6 @@ document.getElementById("pitagoChart").innerHTML = html
 }
 
 
-// ===============================
-// SHOW MISSING NUMBERS
-// ===============================
-
 function showMissingNumbers(chart){
 
 let missing = []
@@ -306,10 +205,6 @@ document.getElementById("missingNumbers").innerHTML =
 
 }
 
-
-// ===============================
-// DETECT PITAGO ARROWS
-// ===============================
 
 function detectArrows(chart){
 
@@ -353,10 +248,6 @@ document.getElementById("pitagoArrows").innerHTML =
 }
 
 
-// ===============================
-// MAIN FUNCTION
-// ===============================
-
 function calculate(){
 
 let name = document.getElementById("name").value.trim()
@@ -365,13 +256,6 @@ let birth = document.getElementById("birth").value
 if(!name || !birth){
 
 alert("Vui lòng nhập đầy đủ họ tên và ngày sinh")
-return
-
-}
-
-if(isNaN(Date.parse(birth))){
-
-alert("Ngày sinh không hợp lệ")
 return
 
 }
@@ -397,7 +281,6 @@ document.getElementById("maturity").innerText = m
 document.getElementById("personalYear").innerText = py
 document.getElementById("personalMonth").innerText = pm
 document.getElementById("personalDay").innerText = pd
-
 
 let chart = createPitagoChart(birth)
 
