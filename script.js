@@ -123,28 +123,23 @@ return reduce(sum)
 function calculate(){
 
 let name = document.getElementById("name").value.trim()
-
 let birth = document.getElementById("birth").value
 
 if(!name || !birth){
 
 alert("Vui lòng nhập đầy đủ họ tên và ngày sinh")
-
 return
 
 }
 
 let life = lifePath(birth)
-
 let exp = expression(name)
-
 let s = soul(name)
-
 let b = birthday(birth)
-
 let a = attitude(birth)
-
 let m = maturity(life,exp)
+
+let py = personalYear(birth)
 
 document.getElementById("life").innerText = life
 document.getElementById("soul").innerText = s
@@ -152,6 +147,10 @@ document.getElementById("expression").innerText = exp
 document.getElementById("birthday").innerText = b
 document.getElementById("attitude").innerText = a
 document.getElementById("maturity").innerText = m
+
+document.getElementById("personalYear").innerText = py
+
+pitagoChart(birth)
 
 }
 function pitagoChart(date){
