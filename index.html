@@ -1,83 +1,43 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Tra cứu Nhân Số Học</title>
-
+<title>Thần Số Học</title>
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>📜 Tra cứu Nhân Số Học</h1>
+<h1>Thần Số Học & Biểu Đồ Pitago</h1>
 
-<p>Khám phá ý nghĩa các con số chủ đạo trong ngày sinh và tên của bạn.</p>
+<div class="form">
 
-<div class="form-box">
-
-<input id="name" placeholder="Nhập họ tên của bạn">
+<input id="name" placeholder="Nhập họ tên">
 
 <input id="birth" type="date">
 
-<button onclick="calculate()">Xem kết quả</button>
+<button onclick="calculate()">Phân tích</button>
 
 </div>
 
-<h2>Kết quả của bạn</h2>
+<div class="results">
 
-<div class="grid">
+<h2>Kết quả</h2>
 
-<div class="card">
-<h3>Số chủ đạo</h3>
-<div id="life">-</div>
-<a href="pages/life-path.html">Xem thêm</a>
-</div>
+<p>Life Path: <span id="life"></span></p>
+<p>Soul Urge: <span id="soul"></span></p>
+<p>Expression: <span id="expression"></span></p>
+<p>Birthday: <span id="birthday"></span></p>
+<p>Attitude: <span id="attitude"></span></p>
+<p>Maturity: <span id="maturity"></span></p>
 
-<div class="card">
-<h3>Linh hồn</h3>
-<div id="soul">-</div>
-<a href="pages/soul.html">Xem thêm</a>
-</div>
-
-<div class="card">
-<h3>Biểu đạt</h3>
-<div id="expression">-</div>
-<a href="pages/expression.html">Xem thêm</a>
-</div>
-
-<div class="card">
-<h3>Ngày sinh</h3>
-<div id="birthday">-</div>
-<a href="pages/birthday.html">Xem thêm</a>
-</div>
-
-<div class="card">
-<h3>Thái độ</h3>
-<div id="attitude">-</div>
-<a href="pages/attitude.html">Xem thêm</a>
-</div>
-
-<div class="card">
-<h3>Trưởng thành</h3>
-<div id="maturity">-</div>
-<a href="pages/maturity.html">Xem thêm</a>
-</div>
-
-<div class="card">
-<h3>Năm cá nhân</h3>
-<div id="personalYear">-</div>
-</div>
+<p>Personal Year: <span id="personalYear"></span></p>
+<p>Personal Month: <span id="personalMonth"></span></p>
+<p>Personal Day: <span id="personalDay"></span></p>
 
 </div>
-
 
 <h2>Biểu đồ Pitago</h2>
 
@@ -87,10 +47,9 @@
 
 <div id="pitagoArrows"></div>
 
-
 </div>
 
-<script src="script.js"></script>
+<script src="numerology.js"></script>
 
 </body>
 </html>
