@@ -1,32 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Tool Nhân Số Học</title>
+<title>Tra cứu Nhân Số Học</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<h1>Tra cứu Nhân Số Học</h1>
+<div class="container">
 
-<input id="name" placeholder="Họ tên">
+<header>
+
+<h1>🔢 Tra cứu Nhân Số Học</h1>
+
+<p class="subtitle">
+Khám phá ý nghĩa các con số trong ngày sinh và tên của bạn
+</p>
+
+</header>
+
+
+<section class="form-box">
+
+<input id="name" placeholder="Nhập họ tên của bạn">
 
 <input id="birth" type="date">
 
 <button onclick="runTool()">Xem kết quả</button>
 
-<div id="result"></div>
+</section>
 
-<script src="js/calculator.js"></script>
-<script src="js/cycles.js"></script>
-<script src="js/charts.js"></script>
-<script src="js/loader.js"></script>
-<script src="js/app.js"></script>
+
+
+<section id="result" class="result">
+
+<h2>Kết quả của bạn</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">#</div>
+<h4>Số chủ đạo</h4>
+<div id="life" class="number">-</div>
+<button class="more">Xem thêm</button>
+</div>
+
+
+<div class="card">
+<div class="icon">♡</div>
+<h4>Linh hồn</h4>
+<div id="soul" class="number">-</div>
+<button class="more">Xem thêm</button>
+</div>
+
+
+<div class="card">
+<div class="icon">🧠</div>
+<h4>Biểu đạt</h4>
+<div id="exp" class="number">-</div>
+<button class="more">Xem thêm</button>
+</div>
+
+
+<div class="card">
+<div class="icon">📅</div>
+<h4>Ngày sinh</h4>
+<div id="birthnum" class="number">-</div>
+<button class="more">Xem thêm</button>
+</div>
+
+
+<div class="card">
+<div class="icon">⚡</div>
+<h4>Thái độ</h4>
+<div id="att" class="number">-</div>
+<button class="more">Xem thêm</button>
+</div>
+
+
+<div class="card">
+<div class="icon">⭐</div>
+<h4>Trưởng thành</h4>
+<div id="mat" class="number">-</div>
+<button class="more">Xem thêm</button>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="explore">
+
+<h3>Khám phá thêm</h3>
+
+<div class="explore-buttons">
+
+<button>Chu kỳ cuộc đời</button>
+
+<button>Biểu đồ Pitago</button>
+
+<button>Ý nghĩa các con số</button>
+
+</div>
+
+</section>
+
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
-
 </html>
