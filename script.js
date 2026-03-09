@@ -278,7 +278,7 @@ document.getElementById("expression").innerText = exp
 document.getElementById("birthday").innerText = b
 document.getElementById("attitude").innerText = a
 document.getElementById("maturity").innerText = m
-document.getElementById("personalYear").innerText = py
+
 
 // PITAGO
 
