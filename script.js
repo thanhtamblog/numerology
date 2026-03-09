@@ -154,3 +154,26 @@ document.getElementById("attitude").innerText = a
 document.getElementById("maturity").innerText = m
 
 }
+function pitagoChart(date){
+
+let nums = date.replaceAll("-","").split("")
+
+let count = {1:"",2:"",3:"",4:"",5:"",6:"",7:"",8:"",9:""}
+
+for(let n of nums){
+
+if(count[n] !== undefined){
+
+count[n] += n
+
+}
+
+}
+
+for(let i=1;i<=9;i++){
+
+document.getElementById("p"+i).innerText = count[i]
+
+}
+
+}
