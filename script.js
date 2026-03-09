@@ -151,6 +151,18 @@ let c4 = Math.abs(month-year)
 return [c1,c2,c3,c4]
 
 }
+
+function calcPersonalYear(day, month){
+    let year = new Date().getFullYear();
+
+    let sum = day + month + year.toString().split('').reduce((a,b)=>a+parseInt(b),0);
+
+    while(sum > 9){
+        sum = sum.toString().split('').reduce((a,b)=>a+parseInt(b),0);
+    }
+
+    return sum;
+}
 // MAIN FUNCTION
 function calculate(){
 
@@ -178,7 +190,9 @@ let a = attitude(birth)
 
 let m = maturity(life,exp)
 
-  let py = personalYear(birth)
+let py = personalYear(birth)
+
+
   
 document.getElementById("life").innerText = life
 document.getElementById("soul").innerText = s
@@ -188,4 +202,6 @@ document.getElementById("attitude").innerText = a
 document.getElementById("maturity").innerText = m
 document.getElementById("personalYear").innerText = py
 document.getElementById("personalYear").innerText = py
+document.getElementById("personalYear").innerText =
+    calcPersonalYear(day, month);
 }
