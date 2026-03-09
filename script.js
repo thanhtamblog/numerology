@@ -164,21 +164,7 @@ function calcPersonalYear(day, month){
     return sum;
 }
 
-function personalYear(date){
 
-let parts = date.split("-")
-
-let day = Number(parts[2])
-let month = Number(parts[1])
-let year = new Date().getFullYear()
-
-let yearSum = year.toString().split('').reduce((a,b)=>a+Number(b),0)
-
-let total = day + month + yearSum
-
-return reduce(total)
-
-}
 
 
 // =============================
