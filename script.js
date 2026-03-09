@@ -164,6 +164,97 @@ function calcPersonalYear(day, month){
     return sum;
 }
 
+function personalYear(date){
+
+let parts = date.split("-")
+
+let day = Number(parts[2])
+let month = Number(parts[1])
+let year = new Date().getFullYear()
+
+let yearSum = year.toString().split('').reduce((a,b)=>a+Number(b),0)
+
+let total = day + month + yearSum
+
+return reduce(total)
+
+}
+
+
+// =============================
+// PITAGO CHART
+// =============================
+
+function createPitagoChart(date){
+
+let digits = date.replaceAll("-","").split("")
+
+let count = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}
+
+digits.forEach(d=>{
+
+if(count[d] !== undefined){
+
+count[d]++
+
+}
+
+})
+
+return count
+
+}
+
+
+// =============================
+// RENDER PITAGO
+// =============================
+
+function renderPitago(chart){
+
+let layout = [1,4,7,2,5,8,3,6,9]
+
+let html = '<div class="pitago-grid">'
+
+layout.forEach(num=>{
+
+let value = chart[num] ? String(num).repeat(chart[num]) : ""
+
+html += `<div class="pitago-cell">${value}</div>`
+
+})
+
+html += "</div>"
+
+document.getElementById("pitagoChart").innerHTML = html
+
+}
+
+
+// =============================
+// MISSING NUMBERS
+// =============================
+
+function showMissingNumbers(chart){
+
+let missing=[]
+
+for(let i=1;i<=9;i++){
+
+if(chart[i]===0){
+
+missing.push(i)
+
+}
+
+}
+
+document.getElementById("missingNumbers").innerHTML =
+"Số thiếu: " + (missing.join(", ") || "Không có")
+
+}
+
+
 // MAIN FUNCTION
 function calculate(){
 
@@ -203,4 +294,12 @@ document.getElementById("attitude").innerText = a
 document.getElementById("maturity").innerText = m
 document.getElementById("personalYear").innerText = py
 
+// PITAGO
+
+let chart = createPitagoChart(birth)
+
+renderPitago(chart)
+
+showMissingNumbers(chart)
+    
 }
