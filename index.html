@@ -3,78 +3,120 @@
 
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Tra cứu Nhân Số Học</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>Tra cứu Nhân Số Học</h1>
-<p class="subtitle">Khám phá ý nghĩa các con số chủ đạo trong ngày sinh và tên của bạn.</p>
+<header>
 
-<div class="form-box">
+<h1>🔢 Tra cứu Nhân Số Học</h1>
+
+<p class="subtitle">
+Khám phá ý nghĩa các con số trong ngày sinh và tên của bạn
+</p>
+
+</header>
+
+
+<section class="form-box">
 
 <input id="name" placeholder="Nhập họ tên của bạn">
 
-<input type="date" id="birth">
+<input id="birth" type="date">
 
-<button onclick="calculate()">Xem kết quả</button>
+<button onclick="runTool()">Xem kết quả</button>
 
-</div>
+</section>
 
+
+
+<section id="result" class="result">
 
 <h2>Kết quả của bạn</h2>
 
-<div class="results">
+<div class="grid">
 
 <div class="card">
-<h3>Số chủ đạo</h3>
-<div id="life">-</div>
+<div class="icon">#</div>
+<h4>Số chủ đạo</h4>
+<div id="life" class="number">-</div>
+<button class="more">Xem thêm</button>
 </div>
+
 
 <div class="card">
-<h3>Linh hồn</h3>
-<div id="soul">-</div>
+<div class="icon">♡</div>
+<h4>Linh hồn</h4>
+<div id="soul" class="number">-</div>
+<button class="more">Xem thêm</button>
 </div>
+
 
 <div class="card">
-<h3>Biểu đạt</h3>
-<div id="expression">-</div>
+<div class="icon">🧠</div>
+<h4>Biểu đạt</h4>
+<div id="exp" class="number">-</div>
+<button class="more">Xem thêm</button>
 </div>
+
 
 <div class="card">
-<h3>Ngày sinh</h3>
-<div id="birthday">-</div>
+<div class="icon">📅</div>
+<h4>Ngày sinh</h4>
+<div id="birthnum" class="number">-</div>
+<button class="more">Xem thêm</button>
 </div>
+
 
 <div class="card">
-<h3>Thái độ</h3>
-<div id="attitude">-</div>
+<div class="icon">⚡</div>
+<h4>Thái độ</h4>
+<div id="att" class="number">-</div>
+<button class="more">Xem thêm</button>
 </div>
+
 
 <div class="card">
-<h3>Trưởng thành</h3>
-<div id="maturity">-</div>
+<div class="icon">⭐</div>
+<h4>Trưởng thành</h4>
+<div id="mat" class="number">-</div>
+<button class="more">Xem thêm</button>
 </div>
 
 </div>
 
+</section>
 
-<h2>Biểu đồ Pitago</h2>
 
-<div class="pitago-section">
 
-<div id="pitagoChart"></div>
+<section class="explore">
 
-<div id="missingNumbers"></div>
+<h3>Khám phá thêm</h3>
+
+<div class="explore-buttons">
+
+<button>Chu kỳ cuộc đời</button>
+
+<button>Biểu đồ Pitago</button>
+
+<button>Ý nghĩa các con số</button>
 
 </div>
 
+</section>
+
+
 </div>
 
-<script src="numerology.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
